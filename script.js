@@ -1,4 +1,4 @@
- 
+ /*----------------------- Animation typewriter ----------------------*/
  const textAnim = document.querySelector("h6");
 
  new Typewriter (textAnim, {
@@ -40,15 +40,31 @@
  .typeString('<span style="color: #d60c3e"> Full Stack !')
  .start()
  
- 
- 
+  /*----------------------- Clock ----------------------*/
+ const deg = 6;
+ const hr = document.querySelector('#hr');
+ const mn = document.querySelector('#mn');
+ const sc = document.querySelector('#sc');
+
+setInterval(() => {
+    let day = new Date();
+    let hh = day.getHours() * 30;
+    let mm = day.getMinutes() * deg;
+    let ss = day.getSeconds() * deg;
+    
+    hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+    mn.style.transform = `rotateZ(${mm}deg)`;
+    sc.style.transform = `rotateZ(${ss}deg)`;
+})
+
+
  
  
  /*----------------------- Menu, Scroll, dark/light ----------------------*/
 
 let menu = document.querySelector('#menu-btn');
 let header = document.querySelector('.header');
-
+ 
 menu.onclick = () =>{
     menu.classList.toggle('fa-times');
     header.classList.toggle('active');
