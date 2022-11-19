@@ -10,6 +10,11 @@
                 -.4rem -.4rem 1rem #fff;
     --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
                       -.4rem -.4rem 1rem #fff inset;
+    --webkit-box-shadow: 5px 5px 10px #ccc inset,
+                       -5px -5px 10px #f2f2f2 inset;
+    --webkit-box-shadow-thumb:-5px -5px 5px #ccc inset,
+                             5px 5px 5px #f2f2f2 inset;
+    --webkit-color:#e6e6e6;
 }
 
 *{
@@ -27,6 +32,21 @@ html{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+/* ------------ Scroll bar : new design ------------ */
+::-webkit-scrollbar {
+    width: 20px;
+    
+}
+::-webkit-scrollbar-track {
+    border-radius: 50px;
+    box-shadow: var(--webkit-box-shadow)
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    box-shadow: var(--webkit-box-shadow-thumb);
+    background: var(--webkit-color);
+}
+
 
 body{
     background: var(--bg-color);
@@ -42,7 +62,14 @@ body.active{
                 -.4rem -.4rem 1rem #333;
     --box-shadow-inset:.4rem .4rem 1rem #111 inset,
                       -.4rem -.4rem 1rem #333 inset;
+    --webkit-box-shadow:5px 5px 10px #0d0d0d inset,
+                      -5px -5px 10px #4d4d4d inset;
+    --webkit-box-shadow-thumb:-5px -5px 5px #0d0d0d  inset,
+                            5px 5px 5px #4d4d4d inset;  
+    --webkit-color:#262626;
+
 }
+
 
 section{
     min-height: 100vh;
@@ -111,6 +138,7 @@ section{
 .header .user p{
     color:var(--green);
     font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .header .navbar{
@@ -190,7 +218,21 @@ section{
     line-height: 1.1;
     text-transform: uppercase;
 }
-
+.home .content h4 {
+    font-size: 1.5em;
+    color: var(--black);
+    font-weight: 700;
+}
+.home .content h4 span {
+    color: var(--green);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.home .content h6 {
+    font-size: 1.8em;
+    color: var(--black);
+    font-weight: 700;
+}
 .home .content p{
     font-size: 2rem;
     color:var(--green);
