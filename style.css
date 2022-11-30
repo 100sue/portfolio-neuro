@@ -561,6 +561,9 @@ section{
     opacity: 0;
     transition-delay: .3s;
 }
+.portfolio .box-container .box .content p {
+    color: var(--black);
+}
 
 .portfolio .box-container .box:hover .content h3{
     transform: translateY(0rem);
